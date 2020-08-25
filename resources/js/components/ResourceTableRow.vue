@@ -24,18 +24,6 @@
       <!-- End reorder buttons -->
     </td>
 
-    <!-- Fields -->
-    <td v-for="field in resource.fields">
-      <component
-        :is="'index-' + field.component"
-        :class="`text-${field.textAlign}`"
-        :resource-name="resourceName"
-        :via-resource="viaResource"
-        :via-resource-id="viaResourceId"
-        :field="field"
-      />
-    </td>
-
     <td class="td-fit text-right pr-6 align-middle">
       <div class="inline-flex items-center">
         <!-- Actions Menu -->
@@ -63,7 +51,7 @@
               },
             }"
           >
-            <icon type="view" width="22" height="18" view-box="0 0 22 16" />
+            <icon type="view" width="22" height="18" view-box="0 0 22 16"/>
           </router-link>
         </span>
 
@@ -87,7 +75,7 @@
               },
             }"
           >
-            <icon type="edit" />
+            <icon type="edit"/>
           </router-link>
 
           <!-- Edit Resource Link -->
@@ -109,7 +97,7 @@
             }"
             v-tooltip.click="__('Edit')"
           >
-            <icon type="edit" />
+            <icon type="edit"/>
           </router-link>
         </span>
 
@@ -122,7 +110,7 @@
           v-if="resource.authorizedToDelete && (!resource.softDeleted || viaManyToMany)"
           @click.prevent="openDeleteModal"
         >
-          <icon />
+          <icon/>
         </button>
 
         <!-- Restore Resource Link -->
@@ -133,7 +121,7 @@
           v-tooltip.click="__('Restore')"
           @click.prevent="openRestoreModal"
         >
-          <icon type="restore" with="20" height="21" />
+          <icon type="restore" with="20" height="21"/>
         </button>
 
         <portal to="modals" transition="fade-transition" v-if="deleteModalOpen || restoreModalOpen">
@@ -162,6 +150,19 @@
         </portal>
       </div>
     </td>
+
+    <!-- Fields -->
+    <td v-for="field in resource.fields">
+      <component
+        :is="'index-' + field.component"
+        :class="`text-${field.textAlign}`"
+        :resource-name="resourceName"
+        :via-resource="viaResource"
+        :via-resource-id="viaResourceId"
+        :field="field"
+      />
+    </td>
+
   </tr>
 </template>
 
