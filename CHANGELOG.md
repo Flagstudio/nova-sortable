@@ -5,6 +5,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.14] - 2020-09-04
+
+### Changed
+
+- Updated dist file(s) forgotten in previous release
+- Updated packages
+
+## [1.4.13] - 2020-09-04
+
+### Changed
+
+- Fixed HasMany not showing correct sorting buttons
+- Fixed ManyToMany not showing any sorting buttons in some cases
+
+## [1.4.12] - 2020-09-01
+
+### Changed
+
+- Fixed a case where a relationship query tried to sort the wrong model (thanks to [@eduardoesternon](https://github.com/eduardoesternon))
+
+## [1.4.11] - 2020-08-31
+
+### Changed
+
+- Fixed a case where a missing `ConvertEmptyStringsToNull` middleware could cause a 400 error
+
+## [1.4.10] - 2020-08-31
+
+### Changed
+
+- Fixed buildSortQuery in updateOrder
+- Add ability to allow or deny sorting capability on specific models (thanks to [@Nickotavers](https://github.com/Nickotavers))
+
+## [1.4.9] - 2020-08-31
+
+### Changed
+
+- Support buildSortQuery in updateOrder (thanks to [@stevelacey](https://github.com/stevelacey))
+- Updated packages
+
 ## [1.4.8] - 2020-08-10
 
 ### Changed
